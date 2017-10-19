@@ -5,11 +5,11 @@ public class Employee {
 		return 0;
 	}
 
-	public void sell() {
+	public void sell() { }
 
-	}
+	public void workOneHour() { }
 
-	public void workOneHour() {
-
+	public String getName() {
+		return null;
 	}
 }
