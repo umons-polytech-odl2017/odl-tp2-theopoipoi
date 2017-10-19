@@ -23,4 +23,9 @@ public class ProductiveWorkerTest {
 		assertThat(productiveWorker).isInstanceOf(Payable.class);
 	}
 
+	@Test
+	public void productiveWorkerIsNotAnEmployee() {
+		ProductiveWorker productiveWorker = exercise2.buildProductiveWorker(25);
+		assertThat(productiveWorker).isNotInstanceOf(Payable.class);
+	}
 }
