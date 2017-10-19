@@ -13,6 +13,7 @@ public class ProductiveWorkerTest {
 		for (int i = 0; i < 100; i++) {
 			productiveWorker.produceOnePiece();
 		}
+		Payable payable = (Payable) productiveWorker;
 		assertThat(productiveWorker.computeSalary()).isEqualTo(2000);
 	}
 

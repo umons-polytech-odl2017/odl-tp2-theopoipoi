@@ -6,7 +6,14 @@ public class WorkHourSalaryEmployeeTest extends AbstractEmployeeTest {
 	private final Exercise2 exercise2 = new Exercise2();
 
 	@Override
-	protected Employee buildEmployee() {
-		return exercise2.buildWorkHourSalaryEmployee("Juliet", 90);
+	protected Employee buildEmployeeAndEarnSomeMoney() {
+		Employee employee = exercise2.buildWorkHourSalaryEmployee("Juliet", 90);
+		employee.workOneHour();
+		return employee;
+	}
+
+	@Override
+	protected int getExpectedSalary() {
+		return 90;
 	}
 }

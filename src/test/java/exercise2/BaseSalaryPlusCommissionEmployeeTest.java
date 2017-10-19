@@ -6,7 +6,14 @@ public class BaseSalaryPlusCommissionEmployeeTest extends AbstractEmployeeTest {
 	private final Exercise2 exercise2 = new Exercise2();
 
 	@Override
-	protected Employee buildEmployee() {
-		return exercise2.buildBaseSalaryPlusCommissionEmployee("Hotel", 1234, 56);
+	protected Employee buildEmployeeAndEarnSomeMoney() {
+		Employee employee = exercise2.buildBaseSalaryPlusCommissionEmployee("Hotel", 1234, 56);
+		employee.sell();
+		return employee;
+	}
+
+	@Override
+	protected int getExpectedSalary() {
+		return 1290;
 	}
 }
