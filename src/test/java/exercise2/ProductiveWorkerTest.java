@@ -14,7 +14,7 @@ public class ProductiveWorkerTest {
 			productiveWorker.produceOnePiece();
 		}
 		Payable payable = (Payable) productiveWorker;
-		assertThat(productiveWorker.computeSalary()).isEqualTo(2000);
+		assertThat(payable.computeSalary()).isEqualTo(2000);
 	}
 
 	@Test
