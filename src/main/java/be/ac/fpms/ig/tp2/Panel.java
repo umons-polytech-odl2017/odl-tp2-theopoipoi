@@ -1,8 +1,7 @@
 package be.ac.fpms.ig.tp2;
 
-import java.awt.Color;
-import java.awt.Container;
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 
 public class Panel extends JFrame {
 	SubPanel myPanel = new SubPanel();

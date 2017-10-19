@@ -1,7 +1,7 @@
 package be.ac.fpms.ig.tp2;
 
-import java.awt.Graphics;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 class SubPanel extends JPanel {
 	private Drawable[] drawables;
