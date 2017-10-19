@@ -1,4 +1,4 @@
-package be.ac.fpms.ig.tp2;
+package exercise3;
 
 public class Point {
 	private int x;

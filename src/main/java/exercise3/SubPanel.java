@@ -1,13 +1,10 @@
-package be.ac.fpms.ig.tp2;
+package exercise3;
 
 import javax.swing.*;
 import java.awt.*;
 
 class SubPanel extends JPanel {
 	private Drawable[] drawables;
-
-	SubPanel() {
-	}
 
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
