@@ -1,0 +1,26 @@
+@startuml
+
+abstract class Employee {
+	{abstract} + computeSalary() : int
+	+ getName() : String
+	+ sell() : void
+	+ workOneHour() : void
+}
+
+class FixedSalaryEmployee {
+	+ FixedSalaryEmployee(name : String, fixedSalary : int)
+}
+
+class BaseSalaryPlusCommissionEmployee {
+	+ BaseSalaryPlusCommissionEmployee(name : String, baseSalary : int, commission : int)
+}
+
+class WorkHourSalaryEmployee {
+	+ WorkHourSalaryEmployee(name : String, hourRate : int)
+}
+
+Employee <|-- FixedSalaryEmployee
+Employee <|--- BaseSalaryPlusCommissionEmployee
+Employee <|-- WorkHourSalaryEmployee
+
+@enduml

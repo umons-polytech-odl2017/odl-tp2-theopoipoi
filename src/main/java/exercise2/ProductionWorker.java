@@ -1,6 +1,6 @@
 package exercise2;
 
-public class ProductiveWorker {
+public class ProductionWorker {
 	public void produceOnePiece() {
 
 	}

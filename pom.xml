@@ -65,6 +65,36 @@
 					</execution>
 				</executions>
 			</plugin>
+			<!-- Generate documentation -->
+			<plugin>
+				<groupId>org.asciidoctor</groupId>
+				<artifactId>asciidoctor-maven-plugin</artifactId>
+				<version>1.5.5</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.asciidoctor</groupId>
+						<artifactId>asciidoctorj-pdf</artifactId>
+						<version>1.5.0-alpha.16</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<backend>pdf</backend>
+					<sourceHighlighter>coderay</sourceHighlighter>
+					<!--attributes>
+						<imagesdir>${project.build.directory}/generated-docs</imagesdir>
+						<imagesoutdir>${project.build.directory}/generated-docs</imagesoutdir>
+					</attributes-->
+				</configuration>
+				<executions>
+					<execution>
+						<id>output-pdf</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>process-asciidoc</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>

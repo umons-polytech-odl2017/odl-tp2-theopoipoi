@@ -1,0 +1,25 @@
+@startuml
+
+together {
+	interface Drawable {
+		{abstract} + getVertices() : Point[]
+	}
+
+	class Point {
+		- x : int
+		- y : int
+	}
+
+	class Panel
+	class SubPanel
+}
+
+Panel .> Drawable : uses
+Drawable ..> Point
+Panel --> SubPanel
+together {
+ConvexPolygon <|-- Rectangle
+Rectangle <|-- Square
+Point <-o "vertices" ConvexPolygon
+}
+@enduml

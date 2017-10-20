@@ -1,0 +1,36 @@
+@startuml
+
+interface Payable {
+	{abstract} + computeSalary() : int
+}
+
+abstract class Employee {
+	+ getName() : String
+	+ sell() : void
+	+ workOneHour() : void
+}
+
+class FixedSalaryEmployee {
+	+ FixedSalaryEmployee(name : String, fixedSalary : int)
+}
+
+class BaseSalaryPlusCommissionEmployee {
+	+ BaseSalaryPlusCommissionEmployee(name : String, baseSalary : int, commission : int)
+}
+
+class WorkHourSalaryEmployee {
+	+ WorkHourSalaryEmployee(name : String, hourRate : int)
+}
+
+class ProductionWorker {
+	+ ProductionWorker(producedPieceRate : int)
+	+ produceOnePiece() : void
+}
+
+Payable <|-- Employee
+Employee <|-- FixedSalaryEmployee
+Employee <|--- BaseSalaryPlusCommissionEmployee
+Employee <|-- WorkHourSalaryEmployee
+Payable <|-- ProductionWorker
+
+@enduml

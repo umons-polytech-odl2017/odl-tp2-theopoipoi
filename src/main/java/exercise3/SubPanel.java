@@ -12,7 +12,6 @@ class SubPanel extends JPanel {
 		for (Drawable drawable : drawables) {
 			drawDrawable(drawable, g);
 		}
-
 	}
 
 	private void drawDrawable(Drawable drawable, Graphics g) {
