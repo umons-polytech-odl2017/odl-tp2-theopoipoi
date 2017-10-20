@@ -2,7 +2,7 @@ package exercise1;
 
 public class Exercise1 {
 	public Employee buildFixedSalaryEmployee(String name, int fixedSalary) {
-		return null;
+		return new FixedSalaryEmployee(name,fixedSalary);
 	}
 
 	public Employee buildBaseSalaryPlusCommissionEmployee(String name, int baseSalary, int commission) {
