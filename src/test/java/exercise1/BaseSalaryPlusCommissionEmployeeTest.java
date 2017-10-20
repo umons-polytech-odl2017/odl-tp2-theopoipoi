@@ -29,7 +29,7 @@ public class BaseSalaryPlusCommissionEmployeeTest extends AbstractEmployeeTest {
 		for (int i = 0; i < 14; i++) {
 			employee.sell();
 		}
-		assertThat(employee.computeSalary()).isEqualTo(3500);
+		assertThat(employee.computeSalary()).isEqualTo(7000);
 	}
 
 	@Test
